@@ -43,8 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (locations.hasOwnProperty(key)) {
 					var obj = locations[key];
 					var address = document.createElement("h3");
-					address.innerText = obj[0].StartLocationName + " - " + 
-													obj[0].TravelDirection + " (identifier: " + obj[0].StartMilepost + ")";
+					address.innerText = obj[0].StartLocationName + " - " + obj[0].TravelDirection + " (identifier: " + obj[0].StartMilepost + ")";
 					container.appendChild(address);
 					for (var i = 0; i < obj.length; i++) {
 						var endingLocation = document.createElement("span");
