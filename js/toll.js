@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	function printSigns(locations) {
-		var container = document.getElementById("toll-container");
+		var container = document.getElementById("toll-list");
 		for (var key in locations) {
 			if (locations.hasOwnProperty(key)) {
 					var obj = locations[key];

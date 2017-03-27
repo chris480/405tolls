@@ -1,1 +1,64 @@
 body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
+.container{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.toll-list{
+	width: 278px;
+}
+
+.toll-sign{
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	max-height: 210px;
+	max-width: 365px;
+	flex:1 1 auto;
+}
+
+.toll-header{
+	border-bottom: 1px solid #ddd;
+}
+
+.toll-header h2, .toll-header img{
+	display: inline-block;
+}
+
+.toll-header h2{
+	font-weight: 100;
+	text-transform: uppercase;
+	margin:0.3em 0.5em;
+}
+
+.toll-current{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 30px;
+	margin:1em 0;
+}
+
+.end-location{
+	width: 60%;
+	font-size: 1.5em;
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	text-align: center;
+}
+
+.current-toll{
+	width: 100px;
+	font-size: 1.8em;
+	color: #fff;
+	text-align: center;
+	background-color: #000;
+    border: 1px solid #fff;
+    outline: 1px solid #dedede;
+}
