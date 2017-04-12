@@ -10,10 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	  if (request.status >= 200 && request.status < 400) {
 	    // We retrieved the data successfully.
 	    data = JSON.parse(request.responseText);
+	    // Locations returned in response are not ordered
 	    var locations  = parseData(data);
-			console.log(locations);
-			printSigns(locations);
 
+		printTollList(locations);
+
+		var firstSignInList = Object.keys(locations)[0];
+		printSigns(locations[firstSignInList], firstSignInList);
 	  } else {
 	    // We reached our target server, but it returned an error.
 
@@ -37,15 +40,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		return keys;
 	}
 
-	function printSigns(locations) {
+	function printTollList(locations) {
 		var container = document.getElementById("toll-list");
+		var tollTemplate = '';
 		for (var key in locations) {
 			if (locations.hasOwnProperty(key)) {
 					var obj = locations[key];
-					var address = document.createElement("h3");
-					address.innerText = obj[0].StartLocationName + " - " + obj[0].TravelDirection + " (identifier: " + obj[0].StartMilepost + ")";
-					container.appendChild(address);
+
+					tollTemplate += '<li class="toll-selector" data-name="'+obj[0].StartLocationName+'" data-id="'+ obj[0].StartMilepost +'" data-direction="'+obj[0].TravelDirection+'">\
+										<div class="name">'+obj[0].StartLocationName+'</div>\
+										<div class="direction">'+obj[0].TravelDirection+'</div>\
+									</li>';
+					/*...
+					Checking and outpouting individual values during testing
 					for (var i = 0; i < obj.length; i++) {
+
 						var endingLocation = document.createElement("span");
 						endingLocation.innerText = obj[i].EndLocationName;
 
@@ -59,13 +68,16 @@ document.addEventListener("DOMContentLoaded", function() {
 						container.appendChild(currentMessage);
 						container.appendChild(currentToll);
 					}
-					var breakline = document.createElement("br");
-					container.appendChild(breakline);
+					*/
+					container.innerHTML = tollTemplate;
 			}
 		}
 	}
 
-
+	function printSigns(tolls, id){
+		console.log(tolls);
+		return false;
+	}
 
   
 });

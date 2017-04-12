@@ -9,16 +9,46 @@ body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
 	margin: 0 auto;
 }
 
-.toll-list{
+.toll-list{	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
 	width: 278px;
 }
 
+.toll-selector{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	list-style: none;
+	border: 2px solid #308164;
+	background-color: #57b192;
+	width: 120px;
+	height: 60px;
+	margin: 0.3em;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+
+.toll-selector:hover{
+	background-color: #308164;
+}
+
 .toll-sign{
+	flex:1 1 auto;
 	border: 1px solid #ddd;
 	border-radius: 15px;
 	max-height: 210px;
 	max-width: 365px;
-	flex:1 1 auto;
+	margin:0 auto;
 }
 
 .toll-header{
