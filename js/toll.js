@@ -35,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	}else{
 		data = JSON.parse(localStorage.getItem('tolls'));
 		initTolls(data);
+
+		//Force activate previously selected element from history
+		var clicked = JSON.parse(localStorage.getItem('clicked')).id;
+		document.querySelectorAll('[data-id="'+clicked+'"]')[0].click();
 	}
 
 	function expired() {
@@ -135,6 +139,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		for (var i = 4; i >= 0; i--) {
 			printSigns(tolls[i], i, tollCount);
 		};
+
+		var saveClicked = {id: el.dataset.id};
+		localStorage.setItem("clicked", JSON.stringify(saveClicked));		
 	}
 
 });

@@ -100,3 +100,21 @@ body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
 .hidden{
 	display: none;
 }
+
+@media (max-width: 739px) {
+	body{
+		overflow: hidden;
+	}
+	.container {
+	    height: 100vh;
+	    justify-content: space-between;
+	    flex-wrap: wrap;
+	    flex-direction: column-reverse;
+	}	
+	.toll-list {
+	    width: inherit;
+	    height: 80px;
+	    flex-direction: column;
+	    overflow-y: scroll;
+	}	
+}
