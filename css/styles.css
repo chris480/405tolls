@@ -42,11 +42,15 @@ body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
 	background-color: #308164;
 }
 
+.toll-selector:active, .toll-selector.clicked{
+	background-color: #4390b5;
+}
+
 .toll-sign{
 	flex:1 1 auto;
 	border: 1px solid #ddd;
 	border-radius: 15px;
-	max-height: 210px;
+	max-height: 245px;
 	max-width: 365px;
 	margin:0 auto;
 }
@@ -91,4 +95,8 @@ body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
 	background-color: #000;
     border: 1px solid #fff;
     outline: 1px solid #dedede;
+}
+
+.hidden{
+	display: none;
 }
