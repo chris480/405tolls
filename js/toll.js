@@ -129,8 +129,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		//Add active class to clicked li element
 		var clicked = document.getElementsByClassName("clicked");
-		while (clicked.length)
+		while (clicked.length){
 		    clicked[0].classList.remove("clicked");
+		}    
 		this.classList.add('clicked');
 		
 		var tolls = el.dataset.tolls.split(';');

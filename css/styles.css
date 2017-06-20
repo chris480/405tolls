@@ -113,8 +113,9 @@ body{font: 16px/1.2 'Overpass', Arial, sans-serif;}
 	}	
 	.toll-list {
 	    width: inherit;
-	    height: 80px;
+	    height: 90px;
 	    flex-direction: column;
-	    overflow-y: scroll;
+	    overflow-x: scroll;
+	    margin-bottom: 5vh;
 	}	
 }
