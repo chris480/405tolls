@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		var clicked = document.getElementsByClassName("clicked");
 		while (clicked.length){
 		    clicked[0].classList.remove("clicked");
+		    clicked = [];
 		}    
 		this.classList.add('clicked');
 		
