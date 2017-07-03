@@ -1,6 +1,7 @@
 var data;
 document.addEventListener("DOMContentLoaded", function() {
-	var url = 'https://cors-anywhere.herokuapp.com/https://wsdot.com/traffic/api/api/tolling?AccessCode=55456380-46f5-46d1-8fc4-cfe225f203d4';
+	//var url = 'https://cors-anywhere.herokuapp.com/https://wsdot.com/traffic/api/api/tolling?AccessCode=55456380-46f5-46d1-8fc4-cfe225f203d4';
+	var url = 'http://phpstack-82388-289946.cloudwaysapps.com/toll.json?callback=toll';
 	var tollCont = document.getElementById('toll-container');
 
 	//Check localstorage and if previous call was greater than 15mins
